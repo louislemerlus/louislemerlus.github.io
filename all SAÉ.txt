@@ -1,0 +1,13 @@
+1 SAE : Création d'un reporting FAIT
+2 SAE : Écriture et lecture de fichiers de données FAIT
+3 SAE : Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple 
+4 SAE : Apprendre en situation la production de données en entreprise
+5 SAE : Présentation en anglais d'un territoire économique et culturel FAIT
+6 SAE : Mise en œuvre d'une enquête FAIT 
+7 SAE : Conception et implémentation d'une base de données
+8 SAE : Estimation par échantillonnage
+9 SAE : Régression sur des données réelles
+10 SAE : Dataviz (concours)
+11 SAE : Construction et présentation d'indicateurs de performance
+12 SAE : Analyse de données, reporting et datavisualisation
+

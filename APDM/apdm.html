@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>À propos de moi - Louis Le Merlus</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background-color: #002244;
+      padding: 10px 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+    .main-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+      align-items: flex-start;
+      position: relative;
+    }
+    .main-wrapper img {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+      left: -130px;
+      top: 80px;
+    }
+    .container {
+      max-width: 800px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      text-align: center;
+      color: #003366;
+      margin-top: 20px;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-mode {
+  background-color: #002244;
+  color: #000000;
+}
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<header>
+<h1>À propos de moi</h1>
+</header>
+<nav>
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../Mes Projets/MesProjet.html">Mes Projets</a></li>
+<li><a href="../Contact/contact.html">Contact</a></li>
+<li><a href="../Bilan/bilan.html">Bilan</a></li>
+</ul>
+</nav>
+<div class="main-wrapper">
+<img alt="Photo de Louis Le Merlus" src="../image/photo_profil.jpg"/>
+<div class="container">
+<h2>Louis Le Merlus</h2>
+<p>Étudiant curieux, réfléchi et à l’écoute, je m'efforce d’être attentif aux autres tout en cultivant mon sens de l'observation. J’aime découvrir de nouvelles choses et partager mes connaissances dès que l’occasion se présente.</p>
+<h3>Mon parcours</h3>
+<p>J’ai grandi et fait mes études à Chartres, où j’ai suivi une filière générale avec des spécialités en Mathématiques et en NSI (Numérique et Sciences Informatiques). Aujourd’hui, je poursuis mes études à Niort, en première année de BUT Science des Données. Cette formation m’a permis de découvrir l’analyse de données et de développer mes compétences dans plusieurs langages de programmation.</p>
+<h3>Mes passions</h3>
+<p>Je suis passionné par le sport, notamment le football et le biathlon. J’aime aussi beaucoup les jeux vidéo : en terminale, avec des amis, nous avons d’ailleurs créé notre propre jeu dans le cadre d’un projet de NSI, une expérience très enrichissante.</p>
+<h3>Des informations complementaires</h3>
+<p>Je suis quelqu’un de plutôt casanier, mais j’apprécie aussi les échanges avec les autres. Grâce aux nombreux travaux de groupe réalisés pendant cette première année de BUT, j’ai beaucoup progressé en dialogue avec des personnes que je ne connais pas. Je suis donc aujourd’hui plus à l’aise pour aller vers les gens et collaborer efficacement.</p>
+</div>
+</div>
+<section style="background-color: white; padding: 40px 20px; margin-top: 40px;">
+<h2 style="text-align: center; color: #003366; margin-bottom: 40px;">Mes Compétences :</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<strong>Python</strong>
+<div style="background-color: #e0e7ec; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+<div style="width: 60%; height: 8px; background: linear-gradient(to right, #003366, #0077cc);"></div>
+</div>
+</div>
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<strong>Rstudio</strong>
+<div style="background-color: #e0e7ec; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+<div style="width: 40%; height: 8px; background: linear-gradient(to right, #003366, #0077cc);"></div>
+</div>
+</div>
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<strong>HTML/CSS</strong>
+<div style="background-color: #e0e7ec; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+<div style="width: 70%; height: 8px; background: linear-gradient(to right, #003366, #0077cc);"></div>
+</div>
+</div>
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<strong>Excel/VBA</strong>
+<div style="background-color: #e0e7ec; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+<div style="width: 50%; height: 8px; background: linear-gradient(to right, #003366, #0077cc);"></div>
+</div>
+</div>
+<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<strong>SAS</strong>
+<div style="background-color: #e0e7ec; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+<div style="width: 30%; height: 8px; background: linear-gradient(to right, #003366, #0077cc);"></div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2024/2025 Louis Le Merlus - Université de Poitiers</p>
+</footer>
+
+<button id="theme-toggle" title="Changer de thème">🌙</button>
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Lire la préférence enregistrée
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  } else {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (body.classList.contains('light-mode')) {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+</body>
+</html>

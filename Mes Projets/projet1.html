@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projet 1 - Louis Le Merlus</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background-color: #002244;
+      padding: 10px 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #003366;
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-mode {
+  background-color: #002244;
+  color: #000000;
+}
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+#theme-toggle:hover {
+  transform: scale(1.1);
+
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Jo Sydney 2000</h1>
+</header>
+<nav>
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../APDM/apdm.html">À propos</a></li>
+<li><a href="MesProjet.html">Mes Projets</a></li>
+<li><a href="../Contact/contact.html">Contact</a></li>
+<li><a href="../Bilan/bilan.html">Bilan</a></li>
+</ul>
+</nav>
+<div class="container">
+<h2>Présentation en anglais en français d’un territoire olympique</h2>
+<p>Ce projet visait à réaliser une présentation d’un territoire ayant accueilli les Jeux Olympiques, en deux langues. La partie en français portait sur l’histoire, l’architecture et les retombées de l’événement pour la ville, tandis que la partie en anglais traitait des aspects géographiques, humains et économiques.</p>
+<p>Réalisé en groupe de trois, nous avons choisi la ville d’Athènes pour sa richesse historique et son lien fort avec les Jeux, depuis l’Antiquité. Son héritage mythologique et ses monuments emblématiques ont nourri notre travail de recherche et de présentation.</p>
+<h3>Outils utilisés :</h3>
+<ul>
+<li>Word</li>
+<li>PowerPoint</li>
+<li>Divers sites internet pour la documentation</li>
+</ul>
+<h3>Ce que nous avons appris :</h3>
+<ul>
+<li>Rechercher et sélectionner des informations pertinentes</li>
+<li>Vérifier et analyser les données recueillies</li>
+<li>Concevoir une présentation structurée et cohérente sur les plans culturel et économique d’une ville olympique</li>
+</ul>
+</div>
+<footer>
+<p>© 2024/2025 Louis Le Merlus - Université de Poitiers</p>
+</footer>
+
+<button id="theme-toggle" title="Changer de thème">🌙</button>
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Lire la préférence enregistrée
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  } else {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (body.classList.contains('light-mode')) {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+</body>
+</html>

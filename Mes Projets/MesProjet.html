@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mes Projets - Louis Le Merlus</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background-color: #002244;
+      padding: 10px 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .project {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 22%;
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .project a {
+      display: block;
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
+    .project a:hover {
+      color: #005599;
+    }
+    .project-small {
+      width: 80%;
+      height: auto;
+      border-radius: 5px;
+      margin: auto;
+      display: block;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-mode {
+  background-color: #002244;
+  color: #000000;
+}
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Mes Projets</h1>
+</header>
+<nav>
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../APDM/apdm.html">À propos</a></li>
+<li><a href="../Contact/contact.html">Contact</a></li>
+<li><a href="../Bilan/bilan.html">Bilan</a></li>
+</ul>
+</nav>
+<div class="container">
+<h2 style="text-align:center; color:#003366;">Mes Projets réalisés</h2>
+<p style="text-align:center;">Voici l'ensemble des projets développés au cours de mes études en groupe ou en solo :</p>
+<div class="project-gallery"><div class="project">
+<a href="projet1.html"><img alt="Projet 1" src="../image/sydney.jpg"/>JO Sydney 2000</a></div><div class="project">
+<a href="projet2.html"><img alt="Projet 2" src="../image/Saé_reporting.png"/>Création d'un reporting</a></div><div class="project">
+<a href="projet3.html"><img alt="Projet 3" src="../image/Gestion_de_fichiers.png"/> Gestion de fichiers en Python</a></div><div class="project">
+<a href="projet4.html"><img alt="Projet 4" src="../image/Enquète.png"/>Mise en œuvre d'une enquête</a></div><div class="project">
+<a href="projet5.html"><img alt="Projet 5" src="../image/Graphe sur r.png"/>Régression sur des données réelles</a></div><div class="project">
+<a href="FleuryMichon.html"><img alt="Projet 6" src="../image/FleuryM.png"/>Construction et présentation d'indicateurs de performance</a></div><div class="project">
+<a href="Dataviz.html"><img alt="Projet 7" src="../image/Dataviz.png"/>Journée Dataviz</a></div><div class="project">
+<a href="Charbon.html"><img alt="Projet 8" src="../image/Charbon.png"/>Poster Communication</a></div>
+</div>
+<footer>
+<p>© 2024/2025 Louis Le Merlus - Université de Poitiers</p>
+</footer>
+<button id="theme-toggle" title="Changer de thème">🌙</button>
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Lire la préférence enregistrée
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  } else {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (body.classList.contains('light-mode')) {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+</body>
+</html>
